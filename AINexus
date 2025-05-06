@@ -136,11 +136,15 @@
         box-shadow: 0 6px 12px rgba(0,0,0,0.1);
       }
       .section-how-it-works {
-        background: var(--base-color-brand--dark-blue);
-        padding: 5rem 2rem;
-        text-align: center;
-        color: white;
-      }
+  background: 
+    linear-gradient(rgba(10, 26, 47, 0.92), rgba(10, 26, 47, 0.92)),
+    url('https://raw.githubusercontent.com/jonnyd1119/AINexus/main/Modern_StockCake-Modern%20Office%20Meeting_1746548965.jpg') no-repeat center center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: white;
+}
       .section-how-it-works h2 {
         font-size: 2rem;
         margin-bottom: 2rem;
