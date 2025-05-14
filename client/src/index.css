@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 230 35% 7%;  /* Very dark blue background */
+  --foreground: 0 0% 100%;   /* White text */
+  --muted: 240 30% 15%;      /* Muted dark blue */
+  --muted-foreground: 240 10% 70%;
+  --popover: 230 35% 7%;
+  --popover-foreground: 0 0% 100%;
+  --card: 230 40% 10%;
+  --card-foreground: 0 0% 100%;
+  --border: 240 25% 20%;
+  --input: 240 25% 20%;
+  --primary: 254 82% 62%;    /* #5846f6 */
+  --primary-foreground: 211 100% 99%;
+  --secondary: 162 94% 42%;  /* #06d6a0 */
+  --secondary-foreground: 0 0% 100%;
+  --accent: 240 30% 15%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%; /* #dc3545 */
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 240 25% 70%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 254 82% 62%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 162 94% 42%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white py-3 px-6 rounded-lg font-semibold hover:bg-opacity-90 transition duration-300;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white py-3 px-6 rounded-lg font-semibold hover:bg-opacity-90 transition duration-300;
+  }
+  
+  .section {
+    @apply py-16 px-4;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-4 text-center text-white;
+  }
+  
+  .section-subtitle {
+    @apply text-xl text-white/70 mb-12 text-center max-w-3xl mx-auto;
+  }
+
+  /* Card Style for dark theme */
+  .dark-card {
+    @apply bg-card text-card-foreground rounded-xl shadow-lg hover:shadow-primary/10 transition-all duration-300;
+  }
+}
